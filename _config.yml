@@ -1,4 +1,4 @@
 name: Becoming a data scientist
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-exclude: ['*ipynb']
+exclude: ['*ipynb', '*txt']

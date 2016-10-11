@@ -19,8 +19,19 @@ a {
 a:hover {
     text-decoration: underline;
 }
+a.reflink{
+    font-size: 1.5;
+    color: blue;
+}
+a:hover.reflink{
+    text-decoration: underline;
+}
 h1 {
     font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+h2 {
+    font-size: 2em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
@@ -34,10 +45,11 @@ footer {
 }
 
 ul.posts {
-    margin: 20px auto 40px;
     font-size: 1.5em;
+    margin: 20px auto 40px;
 }
 
 ul.posts li {
     list-style: none;
 }
+
