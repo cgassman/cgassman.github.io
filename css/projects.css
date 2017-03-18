@@ -1,0 +1,76 @@
+body {
+    margin: 60px auto;
+    width: 70%;
+}
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+a:hover {
+    text-decoration: underline;
+}
+a.reflink{
+    font-size: 1.5;
+    color: blue;
+}
+a:hover.reflink{
+    text-decoration: underline;
+}
+div.projects-info{
+    float: left;
+    width: 30%;
+    height: 350px;
+    margin-right: 3.33333%;
+    background-color: #4fb593;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-left: 10px solid grey;
+    border-radius: 5px;
+}
+h3.projects-info{
+    font-size: 1.7em;
+    font-weight: bold;
+    color: black;
+}
+p.projects-info{
+    font-size: 1.5em;
+    color: black;
+}
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+h2 {
+    font-size: 2em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+div.key-learnings {
+    padding-top: 20px;
+    clear: left;
+    font-size: 1.5em;
+    line-height: 1.4em;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+ul.posts {
+    font-size: 1.5em;
+    margin: 20px auto 40px;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
