@@ -27,6 +27,8 @@ Therefore, I tried to find a way to keep track on newly gained insights in a str
 **ExampleValues** - examples of values that might be stored in this attribute<br/>
 **Comments** - placeholder to add comments based on the analysis done<br/>
 
+Additionally, literature research about the respective problem. Finding out, what additional information might be relevant or useful to model the respective problem. 
+
 
 
 
