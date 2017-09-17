@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "linear regression"
-date: 2017-09-30
+title: "Linear regression"
+date: 2017-09-10
 ---
 
 This blog summarizes a structured approach on the SalePrices example taken from Kaggle. The approach is taken from the book "Multivariate Data Analysis" chapter 4 - multiple regression analysis.
+
+[Code to this blog](https://github.com/cgassman/data-science-projects/blob/master/HousePrices/src/analyze_normality-homoscedacity-linearity.ipynb)
 
 ## Stage 1 - Research Problem
 The House Prices data set is taken from Kaggle. It is a 'getting started' competition. The objective is to predict SalePrices. The interest is on a statistical relationship (not a functional). Statistical means it is an average value and a random component is part of it. 
@@ -21,10 +23,12 @@ A categorical variable with k categories will be transformed into k-1 dummy vari
 
 To achieve a well generalized model, the degree of freedom (DF) should be as large as possible (DF = sample size - number of estimated parameters). A 5:1 ratio (samplesize:params) is a minimum. Better 15:1 even better would be 20:1. 
 
-Hence 
+Hence starting with 1460 samples
 - maximal 292 features to achieve a certain degree of generalization
 - better 97
 - best 73 features to achieve a high probability of a good generalization level
+
+If the train-data has to be reduced (e.g. due to missing values), these max feature values have also to be adjusted. 
 
 
 ## Stage 3 - Assumptions Multiple Regression
