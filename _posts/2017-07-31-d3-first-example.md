@@ -4,7 +4,7 @@ title: "D3.js first example"
 date: 2017-07-31
 ---
 
-Example to use a parallel plot for the houseprices example. 
+Example to use a parallel plot for the houseprices example. [Code to this blog]()
 write code in VisualStudio. Run a python http server from the directory where the html is. open google chrome and go to localhost:8000. call html page. open google chrome dev tools to debug, change etc. as soon as happy enter code into VisualStudio and save. Refresh google chrome. 
 
 D3.js - key learnings
