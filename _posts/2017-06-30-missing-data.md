@@ -12,9 +12,9 @@ It is important to understand possible patterns of missing data. Are parts of th
 
 ## Step 1: determine the type of missing data - Ignorable or not ignorable missing data. 
 
-Ignorable means missing data are expected and part of the research design or is inherent to the techniques used. For instance only taking survey-answers from a sample of the population and not all people, specific design of the data collection process, censored data etc. Remedies are not needed.
+Ignorable means missing data are expected and part of the research design or is inherent to the techniques used. For instance only taking survey-answers from a sample of the population and not all people or a specific design of the data collection process such as skipping sections if not applicable, but also censored data is a type of missing data which is ignorable. Ignorable means that remedies are not needed.
  
-Not ignorable can be grouped into two classes, known versus unknown. Knwon are for instance errors in data entry, creating invalid codes, disclosure restrictions. Unknown is more difficult to identify. An example is the refusal to respond to certain questions, no opinion etc. Remedies might be applicable, if the missing data are found to be random.  
+Not ignorable can be grouped into two classes, known versus unknown missing data. Knwon are for instance errors in data entry, creating invalid codes, disclosure restrictions etc. Unknown is more difficult to identify. Most often it is related directly to the respondent of a survey, e.g. the refusal to respond to a certain questions, respondent has no opinion etc. In case of not ignorable missing data (in both cases, unknown as well as known) remedies might be applicable, if the missing data are found to be random, but the extent and impact of missing data has to be assessed first.
 
 ## Step 2: determine extent of missing data.
 - overall percentage of missing data
@@ -26,13 +26,18 @@ A) <10% missing
 B) 10%-20% missing  
 C) >20% missing  
 
-To visualize missing data it might be useful to print a "patchwork rug" symbolizing missing values with a 'M' and leaving the the rest empty. This way patterns of missing data might be visible.  
 
 ## Step 3: diagnose randomness of missing data.
+Differentiate between MAR and MCAR data.  
+MAR - missing at random. Data might be missing randomly in one feature, but the missing values are depending on the value of another feature.  
+MCAR - missing completely at random. Cases with missing data are indistinguishable from cases with complete data. Preferred, as a it allows for the widest range of potential remedies.  
+
+One option - especially when the data set is small - is to visualize missing data in a "patchwork rug" symbolizing missing values with a 'M' and leaving the the rest empty. This way patterns of missing data might be visible.  
+
+As the sample size and the number of variables increase, the need for empirical diagnostic tests increases. Analyse randomness between groups (e.g. compare features) and analyse randomness overall, compared to expectation of complete randomness. 
 
 
-
-## Step 4: select imputation method
+## Step 4: select imputation method for MCAR
 based on the cases differentiated above.  
 
 **numeric**   
@@ -42,7 +47,7 @@ based on the cases differentiated above.
 
 **non-numeric**  
 A) create dummy variables  
-B) and C) tendency to delete or replace either single observations or whole feature
+B) and C) tendency to delete or replace either single observations or whole feature, as imputation might bias 
 
 
 
