@@ -17,14 +17,17 @@ Ignorable means missing data are expected and part of the research design or is 
 Not ignorable can be grouped into two classes, known versus unknown missing data. Knwon are for instance errors in data entry, creating invalid codes, disclosure restrictions etc. Unknown is more difficult to identify. Most often it is related directly to the respondent of a survey, e.g. the refusal to respond to a certain questions, respondent has no opinion etc. In case of not ignorable missing data (in both cases, unknown as well as known) remedies might be applicable, if the missing data are found to be random, but the extent and impact of missing data has to be assessed first.
 
 ## Step 2: determine extent of missing data.
-- overall percentage of missing data
-- missing data per feature
-- missing data per observation/sample. This has a direct impact on numbers of features that could be used for a model. 5observations : 1feature (min), 15:1 (good), 20:1 (best)
+Given the case that some missing data are not_ignorable, the extent of missing data (overall, per feature, per observation) as well as the patterns need to be analyzed.
+ 
+- *overall* percentage of missing data. Should be less than 50% as otherwise bias would be imputed or in case of deletion sample size most probably becomes too small.  
+- missing data per *feature*. Differentiate between cases, as listed below.  
+- missing data per *observation/sample*. Differentiate between cases, as listed below. 
+- Finally, determine number of observations with no missing data on any feature. This provides the sample size available, if no remedies are applied and all missing data would be deleted.  
 
 differentiate between cases  
-A) <10% missing  
-B) 10%-20% missing  
-C) >20% missing  
+A) <10% missing data. In general, if no specific nonrandom patterns appear, any remediation can be applied. See step 4   
+B) 10%-20% missing data. In general, randomness has to be determined with specific approaches before appropriate remedies can be applied. See step 3.  
+C) >20% missing data. Strong candidate for deletion or replacement through (correlated) feature, as imputing might bias the result. Determine the remaining sample size in case of deletion. Cases where >50% of data is missing should be deleted anyway.    
 
 
 ## Step 3: diagnose randomness of missing data.
