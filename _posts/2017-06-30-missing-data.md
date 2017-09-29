@@ -22,22 +22,29 @@ Given the case that some missing data are not_ignorable, the extent of missing d
 - *overall* percentage of missing data. Should be less than 50% as otherwise bias would be imputed or in case of deletion sample size most probably becomes too small.  
 - missing data per *feature*. Differentiate between cases, as listed below.  
 - missing data per *observation/sample*. Differentiate between cases, as listed below. 
-- Finally, determine number of observations with no missing data on any feature. This provides the sample size available, if no remedies are applied and all missing data would be deleted.  
+- Finally, determine number of observations with no missing values. This provides the sample size available, if no remedies are applied and all missing data would be deleted.  
 
 differentiate between cases  
 A) <10% missing data. In general, if no specific nonrandom patterns appear, any remediation can be applied. See step 4   
 B) 10%-20% missing data. In general, randomness has to be determined with specific approaches before appropriate remedies can be applied. See step 3.  
-C) >20% missing data. Strong candidate for deletion or replacement through (correlated) feature, as imputing might bias the result. Determine the remaining sample size in case of deletion. Cases where >50% of data is missing should be deleted anyway.    
+C) >20% missing data. Strong candidate for deletion or replacement through (correlated) feature, as imputing might bias the result.  
+D) Cases where >50% of data is missing should be deleted anyway, as imputing would result in bias.    
+
+Determine the remaining sample size in case of deletion. Be sure the overall decrease in missing data is large enough to justify deletion. 
 
 
 ## Step 3: diagnose randomness of missing data.
-Differentiate between MAR and MCAR data.  
+
+The objectiv is to ascertain randomness of the missing data to determine appropriate remedies. Two levels of randomness exist MAR and MCAR data. 
+ 
 MAR - missing at random. Data might be missing randomly in one feature, but the missing values are depending on the value of another feature.  
 MCAR - missing completely at random. Cases with missing data are indistinguishable from cases with complete data. Preferred, as a it allows for the widest range of potential remedies.  
 
-One option - especially when the data set is small - is to visualize missing data in a "patchwork rug" symbolizing missing values with a 'M' and leaving the the rest empty. This way patterns of missing data might be visible.  
+Diagnosis of level of randomness. One option - especially when the data set is small - is to visualize missing data in a "patchwork rug" symbolizing missing values with a 'M' and leaving the the rest empty. This way patterns of missing data might be visible.  
 
-As the sample size and the number of variables increase, the need for empirical diagnostic tests increases. Analyse randomness between groups (e.g. compare features) and analyse randomness overall, compared to expectation of complete randomness. 
+As the sample size and the number of variables increase, the need for empirical diagnostic tests increases. Such diagnostic tests might for instance analyse randomness between groups (e.g. observations with missing data in a feature and observations with non-missing data in the same feature, compared with each other, or compared with other features etc). Another diagnostic test might analyse randomness overall, compared to the expectation of complete randomness. 
+
+The diagnosis whether the missing data is MAR or MCAR defines which imputation remedies might be appropriate in the present case. MCAR would be preferred, as it allows for the wider range of potential remedies. 
 
 
 ## Step 4: select imputation method for MCAR
