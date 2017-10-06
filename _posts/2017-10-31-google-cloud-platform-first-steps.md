@@ -22,10 +22,10 @@ thanks to the environment's pre-installation the focus can be set on the machine
 - gcloud ml-engine (needed for training and prediction); user arguments first, followed by command line arguments, separated by "-- \"
 - gsutil (needed to manage storage and the data used)
 
-
 ## run this walkthrough via MACOS
 as the environment has to be set up this provides a good opportunity to improve and refresh command line skills ;-) Especially the tensorflow dependency provided some difficulties.  
-Although the tensorflow example successfully ran in the virtual environment, the tensorflow import threw an exception.  
+Although the tensorflow example successfully ran in the virtual environment, the tensorflow import threw an exception (import tensorflow not found).  
+Solution to the "import tensorflow not found" error: go with virtualenv 15.1.0 and tensorflow 1.3.0 (instead of 1.2.0 as mentioned in the example and also specified in the requirements.txt).  
 
 Remark: refresh of most used commands for later re-use
 - VAR_NAME=output assigns value output to variable VAR_NAME. E.g TRAIN=$(pwd)/data/adult.data.csv 
@@ -35,8 +35,15 @@ Remark: refresh of most used commands for later re-use
 - .. (two dots) refers to on directory above from current directory
 - ~ (tilde) stands for the homedirectory
 - gcloud components update to update gcloud sdk
-- python -V to get information on installed version of python
-- pip show tensorflow to get information on installed version of tensorflow
+- python -V to get information on installed version of python - 2.7.14 (in the tutorial used)
+- pip show tensorflow to get information on installed version of tensorflow - 1.3.0 (in the tutorial used. Instead of 1.2.0!)
+
+
+# HousePrice example (from Kaggle) run on GCP - with Cloud ML Engine
+
+
+# HousePrice example (from Kaggle) run on GCP - as stand alone python applications
+
 
 
 # IAM concept in GCP
