@@ -4,10 +4,16 @@ title: "Kubernetes and Docker in the GCP"
 date: 2017-12-01
 ---
 
-December is dedicated to Kubernetes and Docker in the Google Cloud Platform (GCP). As container technology is causing excitement, I want to dive deeper into technologies such as for example Docker and Kubernetes. After buying some credits, the quest "Kubernetes in the Google Cloud" from [QWIKLABS](https://run.qwiklab.com/dashboard) serves as my starting point.   
+December (and also January and February) are dedicated to Kubernetes and Docker in the Google Cloud Platform (GCP). As container technology is causing excitement, I want to dive deeper into technologies such as for example Docker and Kubernetes. After buying some credits, the quest "Kubernetes in the Google Cloud" from [QWIKLABS](https://run.qwiklab.com/dashboard) serves as my starting point.   
 
 ## Quest - Kubernetes in the Google Cloud
-A quest consists of several labs. Each lab costs a certain amount of credits which can be bought easily. For a started lab a certain amount of time is available, during which prepared resources are available to be used right away, no set-up instructions required. However, to me the available time is calculated in a rather tight way. Pre- or post-studies are needed, to really get the most out of the lab. After the lab's time is up, the resources will be disconnected.   
+A quest consists of several labs. Each lab costs a certain amount of credits which can be bought easily. For a started lab a certain amount of time is available, during which prepared resources are available to be used right away, no set-up instructions required. However, to me the available time is calculated in a rather tight way. Pre- or post-studies are needed, to really get the most out of the lab. After the lab's time is up, the resources will be disconnected immediately. 
+
+After gaining some experience with [QWIKLABS](https://run.qwiklab.com/dashboard) and its introduction part, let's have a look at the fundamentals of Kubernetes
+
+Hello Node Kubernetes
+----------------------
+   
 
 
 ------------------------------------------------------------------------------------------------------------------
